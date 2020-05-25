@@ -8,13 +8,11 @@ Sub setValueInEverySheet()
 '
    
     Dim sheetIdx, sheetCount As Integer
-    Dim d As Date
 
     For sheetIdx = 1 To Sheets.Count
       ' DATEVALUE("2020-5-25") = 43976
-      d = CDate(43976 + sheetIdx)
-      Sheets(sheetIdx).Cells(4, 2).Value = d
-      MsgBox (d)
+      Sheets(sheetIdx).Cells(4, 2).Value = CDate(43976 + sheetIdx)
+      ' MsgBox (d)
     Next
     
 End Sub
